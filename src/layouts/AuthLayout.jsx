@@ -2,8 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 const AuthLayout = () => {
     return (
-        <div>
-            this is AuthLayout
+        <div className='font-fontPoppins'>
             <Outlet></Outlet>
         </div>
     );
