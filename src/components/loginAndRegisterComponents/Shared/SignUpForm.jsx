@@ -3,7 +3,14 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [showRetypedPassword, setShowRetypedPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  // verify password
+  const verifyPassword = (password, reTypedPassword) => {
+    return password === reTypedPassword;
+  };
 
   // handle form submit
   const handleSubmit = (event) => {
@@ -13,9 +20,16 @@ const SignUpForm = () => {
     const userName = formData.name.value;
     const userEmail = formData.email.value;
     const password = formData.password.value;
-    const confirmPassword = formData.confirmPassword.value;
+    const retypedPassword = formData.confirmPassword.value;
 
-    console.log(userName, userEmail, password, confirmPassword);
+    console.log(userName, userEmail, password, retypedPassword);
+    let isConfirmed = verifyPassword(password, retypedPassword);
+    console.log(isConfirmed);
+    if (!isConfirmed) {
+      setErrorMessage(true);
+    } else {
+      setErrorMessage(false);
+    }
   };
 
   return (
@@ -106,23 +120,28 @@ const SignUpForm = () => {
               <input
                 required
                 className="w-full border-2 rounded-lg  py-3 px-3 text-theme-text-color-2 focus:border-theme-text-color-2 focus:outline-none mt-3"
-                type={showPassword ? "text" : "password"} //for showing password as text
+                type={showRetypedPassword ? "text" : "password"} //for showing password as text
                 name="confirmPassword"
                 placeholder="Re-type your password"
               />
               {/* change icon based on state */}
-              {showPassword ? (
+              {showRetypedPassword ? (
                 <FaRegEye
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowRetypedPassword(!showRetypedPassword)}
                   className="absolute right-4 bottom-4 text-lg text-black opacity-50 cursor-pointer"
                 ></FaRegEye>
               ) : (
                 <FaRegEyeSlash
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowRetypedPassword(!showRetypedPassword)}
                   className="absolute right-4 bottom-4 text-lg text-black opacity-50 cursor-pointer"
                 ></FaRegEyeSlash>
               )}
             </div>
+            {errorMessage && (
+              <p className="text-red-500 mt-1">
+                Invalid Password! Please retype the password
+              </p>
+            )}
           </div>
           {/* Terms of Service */}
           <div className="mt-5 flex items-center">
