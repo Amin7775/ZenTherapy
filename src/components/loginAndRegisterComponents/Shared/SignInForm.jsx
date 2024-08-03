@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaFacebookF, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import googleLogo from "./../../../assets/img/google logo.png";
 import DividerWithText from "../../shared/dividerWithText/DividerWithText";
+import { Link } from "react-router-dom";
 
 const SignInForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -101,19 +102,24 @@ const SignInForm = () => {
             </div>
           </div>
 
-          {/* Terms of Service */}
-          <div className="mt-5 flex items-center">
-            <input
-              className="mr-2 leading-tight"
-              type="checkbox"
-              checked={isChecked}
-              onChange={() => setIsChecked(!isChecked)}
-              id="terms"
-            />
-            <label className="text-sm" htmlFor="terms">
-              Remember me
-            </label>
-          </div>
+          {/* Remember me and forgot password */}
+          <section className=" mt-4 flex justify-between items-center">
+            {/* remember me  */}
+            <div className=" flex items-center">
+              <input
+                className="mr-2 leading-tight"
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
+                id="terms"
+              />
+              <label className="text-sm" htmlFor="terms">
+                Remember me
+              </label>
+            </div>
+            {/* forgot password */}
+            <p className="text-primary-Color-blue-1 underline text-sm font-medium">Forgot Password?</p>
+          </section>
           {/* Sign Up Button */}
           <div className="mt-5 flex justify-center">
             <button
@@ -125,6 +131,9 @@ const SignInForm = () => {
               Sign in
             </button>
           </div>
+          {/* redirect to register/signup page */}
+          <p className="text-center mt-4">Don't Have an Account?  
+            <Link to={"/register"}> <span className="text-primary-Color-blue-2 underline font-medium">Create Account</span></Link></p>
         </form>
       </section>
     </div>
