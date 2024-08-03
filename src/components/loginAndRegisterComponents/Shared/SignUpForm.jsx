@@ -36,11 +36,11 @@ const SignUpForm = () => {
   return (
     <div>
       {/* heading contents */}
-      <h1 className="text-[40px] font-medium text-primary-Color-blue-1">
+      <h1 className="text-[40px] font-medium text-primary-Color-blue-1 hidden md:block">
         ZenTherapy
       </h1>
 
-      <h2 className="mt-3 text-3xl font-semibold">Sign Up Your Account</h2>
+      <h2 className="mt-3 text-3xl font-semibold text-center md:text-start">Sign Up Your Account</h2>
 
       <p className="mt-4 text-theme-text-color-2 text-wrap hidden md:block">
         welcome Back! By click the sign up button, you're agree to ZenTherapy
@@ -51,7 +51,7 @@ const SignUpForm = () => {
       </p>
 
       {/* form content */}
-      <section className="w-full overflow-x-hidden mt-8">
+      <section className="w-full overflow-x-hidden mt-6 md:mt-8">
         <form onSubmit={handleSubmit}>
           {/* user name */}
           <div>
