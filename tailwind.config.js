@@ -11,6 +11,7 @@ export default {
         "primary-Color-blue-2": "#156BCA",
         "theme-text-color-1": "#152A16",
         "theme-text-color-2": "#5C635A",
+        "custom-black": "#2f2f2f"
       }
     },
   },

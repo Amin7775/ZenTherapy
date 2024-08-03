@@ -23,29 +23,35 @@ const SignInForm = () => {
   return (
     <div>
       {/* heading contents */}
-      <h1 className="text-[40px] font-medium text-primary-Color-blue-1">
+      <h1 className="text-[40px] font-medium text-primary-Color-blue-1 text-start hidden md:block">
         ZenTherapy
       </h1>
 
-      <h2 className="mt-3 text-3xl font-semibold">Sign In To Your Account</h2>
+      <h1 className="text-3xl  font-semibold  text-custom-black  text-center md:hidden">
+        Sign In To Your Account
+      </h1>
 
-      <p className="mt-4 text-theme-text-color-2 text-wrap hidden md:block">
+      <h2 className="mt-3 text-3xl font-semibold hidden md:block">
+        Sign In To Your Account
+      </h2>
+
+      <p className="mt-4 text-theme-text-color-2 text-wrap text-center md:text-start">
         welcome Back! Select a method to log in.
       </p>
 
       {/* Other SignIn Methods - Google and Facebook */}
       {/* - Google is functional - TODO - Make facebook Functional Later*/}
-      <section className="flex justify-center gap-10 mt-8">
+      <section className="flex justify-center gap-8 md:gap-10 mt-7 md:mt-8">
         {/* google */}
         <div>
-          <button className="flex items-center justify-center bg-gradient-to-r from-[#8f8f8f3b] to-white px-10 py-3 drop-shadow-md gap-3 rounded-lg border-2 hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2">
+          <button className="flex items-center justify-center bg-gradient-to-r from-[#8f8f8f3b] to-white px-8 md:px-10 py-3 drop-shadow-md gap-3 rounded-lg border-2 hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2">
             <img className="w-5" src={googleLogo} alt="" />
             Google
           </button>
         </div>
         {/* facebook */}
         <div>
-          <button className="flex items-center justify-center bg-gradient-to-r from-[#298FFF] to-[#0778F5] px-10 py-3 drop-shadow-md gap-3 rounded-lg text-white border-2 border-[#298FFF] hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2">
+          <button className="flex items-center justify-center bg-gradient-to-r from-[#298FFF] to-[#0778F5] px-7 md:px-10 py-3 drop-shadow-md gap-3 rounded-lg text-white border-2 border-[#298FFF] hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2">
             <FaFacebookF className=""></FaFacebookF>
             Facebook
           </button>
@@ -118,7 +124,9 @@ const SignInForm = () => {
               </label>
             </div>
             {/* forgot password */}
-            <p className="text-primary-Color-blue-1 underline text-sm font-medium">Forgot Password?</p>
+            <p className="text-primary-Color-blue-1 underline text-sm font-medium">
+              Forgot Password?
+            </p>
           </section>
           {/* Sign Up Button */}
           <div className="mt-5 flex justify-center">
@@ -132,8 +140,15 @@ const SignInForm = () => {
             </button>
           </div>
           {/* redirect to register/signup page */}
-          <p className="text-center mt-4">Don't Have an Account?  
-            <Link to={"/register"}> <span className="text-primary-Color-blue-2 underline font-medium">Create Account</span></Link></p>
+          <p className="text-center mt-4">
+            Don't Have an Account?
+            <Link to={"/register"}>
+              {" "}
+              <span className="text-primary-Color-blue-2 underline font-medium">
+                Create Account
+              </span>
+            </Link>
+          </p>
         </form>
       </section>
     </div>

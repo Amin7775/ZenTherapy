@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -170,6 +171,9 @@ const SignUpForm = () => {
               Sign Up
             </button>
           </div>
+          {/* redirect to Login/SignIn page */}
+          <p className="text-center mt-4">Already Have an Account?  
+            <Link to={"/"}> <span className="text-primary-Color-blue-2 underline font-medium">Log in</span></Link></p>
         </form>
       </section>
     </div>
