@@ -1,11 +1,9 @@
 import { BsInfoSquare } from "react-icons/bs";
-import { CiGrid41, CiHeart, CiSearch } from "react-icons/ci";
+import { CiGrid41, CiSearch } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
-import { GrDocumentText } from "react-icons/gr";
 import { ImFileText2 } from "react-icons/im";
 import { IoIosHeartEmpty } from "react-icons/io";
-import { IoDocumentTextOutline, IoSettingsOutline } from "react-icons/io5";
-import { LuFileSpreadsheet } from "react-icons/lu";
+import { IoSettingsOutline } from "react-icons/io5";
 import { NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
@@ -97,7 +95,7 @@ const Sidebar = () => {
               "/main/help"
             )}`}
           >
-            <BsInfoSquare  className="text-xl mt-0.5" />
+            <BsInfoSquare className="text-xl mt-0.5" />
             <p>Help Center</p>
           </div>
         </NavLink>
@@ -109,7 +107,7 @@ const Sidebar = () => {
               "/main/settings"
             )}`}
           >
-            <IoSettingsOutline  className="text-xl mt-0.5" />
+            <IoSettingsOutline className="text-xl mt-0.5" />
             <p>Settings</p>
           </div>
         </NavLink>
