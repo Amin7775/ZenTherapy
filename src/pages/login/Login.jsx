@@ -1,6 +1,7 @@
 // import ImageSection from "../../components/loginAndRegisterComponents/Large/ImageSection";
 
 import SignInImageSection from "../../components/loginAndRegisterComponents/Large/SignInImageSection";
+import SignInForm from "../../components/loginAndRegisterComponents/Shared/SignInForm";
 import SignUpForm from "../../components/loginAndRegisterComponents/Shared/SignUpForm";
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
           <section className="flex justify-center items-center gap-32 mx-auto  w-[83%] ">
             {/* form section */}
             <div className="flex-1">
-              <SignUpForm></SignUpForm>
+              <SignInForm></SignInForm>
             </div>
             {/* image section */}
             <div className="w-[55%]">
