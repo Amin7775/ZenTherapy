@@ -24,7 +24,7 @@ const Search = () => {
     document.getElementById("my_modal_4").showModal();
   };
   return (
-    <div className="py-4 pb-8 md:p-8 min-h-screen border-2">
+    <div className="py-4 pb-8 md:p-8 min-h-screen">
       <section className="flex flex-col items-center justify-center w-full  min-h-[68vh]">
         <img className="w-[80%] md:w-[23%] mb-10" src={searchImage} alt="" />
         {/* search bar */}

@@ -1,9 +1,10 @@
 
 const Favorites = () => {
     return (
-        <div>
-            This is favorites
-        </div>
+        <div className="py-4 pb-8 md:p-8">
+            <h1 className="text-3xl font-bold text-custom-black mb-4 text-center">Favorites</h1>
+            
+        </div>  
     );
 };
 

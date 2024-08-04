@@ -11,11 +11,13 @@ import Favorites from "../pages/favorites/Favorites";
 import HelpCenter from "../pages/helpCenter/HelpCenter";
 import Settings from "../pages/settings/Settings";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <AuthLayout></AuthLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -34,6 +36,7 @@ const router = createBrowserRouter([
         <MainLayout></MainLayout>
       </PrivateRoute>
     ),
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "home",
