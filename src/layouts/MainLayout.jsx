@@ -4,10 +4,10 @@ import Navbar from "../components/shared/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="max-w-[100%]">
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* Sidebar - for large device only */}
-        <section className="w-[250px] border-r border-r-[#E7E7E7] hidden lg:block">
+        <section className="min-w-[250px] border-r border-r-[#E7E7E7] hidden lg:block">
           <Sidebar></Sidebar>
         </section>
         {/* main */}
