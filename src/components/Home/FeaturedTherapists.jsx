@@ -88,7 +88,7 @@ const FeaturedTherapists = () => {
   //     ],
   //   };
   return (
-    <div className="p-4 md:p-8 bg-white w-[98%] mx-auto md:w-[82vw] overflow-x-hidden">
+    <div className="p-4 md:p-8 bg-white w-[98%] mx-auto md:w-[82vw] overflow-x-hidden rounded-xl">
       <div className="max-w-[90%] mx-auto md:max-w-screen-2xl">
         {/* react slick - responsive issue */}
         {/* <Slider {...settings}>

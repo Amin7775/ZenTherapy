@@ -1,7 +1,7 @@
 const Cities = () => {
   
   return (
-    <div className="bg-white">
+    <div className="bg-white rounded-xl">
       <section className="grid grid-cols-3 gap-2  text-center py-6 underline text-blue-600">
         {/* First Row */}
         <div className="w-full ">

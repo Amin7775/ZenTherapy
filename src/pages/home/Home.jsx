@@ -9,7 +9,7 @@ const Home = () => {
       {/* search section */}
       <SearchSection></SearchSection>
       {/* featured therapists section */}
-      <h1 className="mt-5 md:mt-10 text-xl px-4 md:px-0 md:text-2xl font-medium mb-4 md:mb-3">
+      <h1 className="mt-5 md:mt-10 text-xl px-4 md:px-0 md:text-2xl font-medium mb-4 md:mb-3 ml-0 md:ml-1">
         Featured Therapists
       </h1>
       <div className="max-w-[100%] overflow-x-hidden">
