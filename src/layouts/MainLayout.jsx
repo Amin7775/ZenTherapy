@@ -11,8 +11,10 @@ const MainLayout = () => {
           <Sidebar></Sidebar>
         </section>
         {/* main */}
-        <section className="bg-[#EFF2F5] flex-1">
+        <section className="bg-[#EFF2F5] flex-1 relative">
+          <div className="sticky w-full z-50 border-b drop-shadow-sm">
           <Navbar></Navbar>
+          </div>
           <Outlet></Outlet>
         </section>
       </div>

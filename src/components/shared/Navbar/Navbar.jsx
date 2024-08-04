@@ -35,7 +35,7 @@ const Navbar = () => {
         <section className="flex justify-between items-center h-full">
           {/* user info */}
           {/*for large device only */}
-          <section className="hidden">
+          <section className="hidden md:block">
             <section className="flex items-center gap-2">
               <img
                 className="rounded-full w-10"
@@ -59,7 +59,7 @@ const Navbar = () => {
           </section>
           {/* Org name/logo */}
           {/* for small device */}
-          <section>
+          <section className="md:hidden">
             <div>
               <h1 className="text-2xl font-medium text-primary-Color-blue-1 ">
                 ZenTherapy
@@ -112,7 +112,7 @@ const Navbar = () => {
             </div>
             {/* nav menu for small devices */}
             {/* icon */}
-            <section className="">
+            <section className="md:hidden">
               <button onClick={toggleNavbar}>
                 <HiMenuAlt3 className="text-xl"></HiMenuAlt3>
               </button>

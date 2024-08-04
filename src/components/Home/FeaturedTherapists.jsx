@@ -88,7 +88,7 @@ const FeaturedTherapists = () => {
   //     ],
   //   };
   return (
-    <div className="p-4 md:p-8 bg-white max-w-[100%] overflow-x-hidden">
+    <div className="p-4 md:p-8 bg-white w-[98%] mx-auto md:w-[82vw] overflow-x-hidden">
       <div className="max-w-[90%] mx-auto md:max-w-screen-2xl">
         {/* react slick - responsive issue */}
         {/* <Slider {...settings}>
@@ -163,7 +163,9 @@ const FeaturedTherapists = () => {
                 </div>
                 {/* details section */}
                 <section className="mt-5 bg-sidebar-hover hover:bg-primary-Color-blue-2 transition-all duration-300 ease-in-out cursor-pointer">
-                  <p className="py-4 text-xl font-medium underline text-center hover:text-white">See Details</p>
+                  <p className="py-4 text-xl font-medium underline text-center hover:text-white">
+                    See Details
+                  </p>
                 </section>
               </section>
             </SwiperSlide>
