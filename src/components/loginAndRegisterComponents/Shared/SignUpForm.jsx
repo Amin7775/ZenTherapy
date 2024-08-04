@@ -28,9 +28,9 @@ const SignUpForm = () => {
     const password = formData.password.value;
     const retypedPassword = formData.confirmPassword.value;
 
-    console.log(userName, userEmail, password, retypedPassword);
+    // console.log(userName, userEmail, password, retypedPassword);
     let isConfirmed = verifyPassword(password, retypedPassword);
-    console.log(isConfirmed);
+    // console.log(isConfirmed);
     if (!isConfirmed) {
       setErrorMessage(true);
     } else {

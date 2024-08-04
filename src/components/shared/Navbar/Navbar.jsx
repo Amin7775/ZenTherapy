@@ -11,7 +11,7 @@ import { GoPeople } from "react-icons/go";
 import { ImFileText2 } from "react-icons/im";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
   // console.log(user);
 
   const handleSignOut = () =>{
-    console.log("clicked")
+    // console.log("clicked")
     logOut()
   }  
 // set style to active nav class
@@ -69,9 +69,11 @@ const Navbar = () => {
           {/* for small device */}
           <section className="md:hidden">
             <div>
+              <Link to={'/main/home'}>
               <h1 className="text-2xl font-medium text-primary-Color-blue-1 ">
                 ZenTherapy
               </h1>
+              </Link>
             </div>
           </section>
           {/* Actions */}

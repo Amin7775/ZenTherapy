@@ -4,7 +4,7 @@ import { GoPeople } from "react-icons/go";
 import { ImFileText2 } from "react-icons/im";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -18,9 +18,11 @@ const Sidebar = () => {
     <div>
       {/* logo */}
       <section className="pt-16 pb-10 ">
+        <Link to={"/main/home"}>
         <h1 className="text-3xl font-medium text-primary-Color-blue-1 text-center">
           ZenTherapy
         </h1>
+        </Link>
       </section>
       {/* menu */}
       <section>
