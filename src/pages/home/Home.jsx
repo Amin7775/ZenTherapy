@@ -1,10 +1,11 @@
+import Cities from "../../components/Home/Cities";
 import FeaturedTherapists from "../../components/Home/FeaturedTherapists";
 import SearchSection from "../../components/Home/SearchSection";
 import Testimonials from "../../components/Home/Testimonials";
 
 const Home = () => {
   return (
-    <div className="py-4 md:p-8">
+    <div className="py-4 pb-8 md:p-8">
       {/* search section */}
       <SearchSection></SearchSection>
       {/* featured therapists section */}
@@ -16,7 +17,7 @@ const Home = () => {
         <FeaturedTherapists></FeaturedTherapists>
       </div>
       {/* testimonial and cities section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <section className="grid grid-cols-1 md:grid-cols-2  md:gap-10">
         {/* testimonials */}
         <section>
           <h1 className="mt-5 md:mt-10 text-xl px-4 md:px-0 md:text-2xl font-medium mb-4 md:mb-3">
@@ -29,6 +30,7 @@ const Home = () => {
           <h1 className="mt-5 md:mt-10 text-xl px-4 md:px-0 md:text-2xl font-medium mb-4 md:mb-3">
             Popular Cities
           </h1>
+          <Cities></Cities>
         </section>
       </section>
     </div>

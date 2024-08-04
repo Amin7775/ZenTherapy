@@ -9,7 +9,7 @@ import { MdLocationPin } from "react-icons/md";
 
 const Testimonials = () => {
   return (
-    <div className="p-4 md:p-8 bg-white">
+    <div className="p-4 md:p-8 md:pt-10 bg-white">
       {/* slider */}
       <section>
         <Swiper
