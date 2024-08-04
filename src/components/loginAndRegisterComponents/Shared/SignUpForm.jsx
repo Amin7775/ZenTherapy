@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showRetypedPassword, setShowRetypedPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
+  const { createUser, updateUser } = useContext(AuthContext);
 
   // verify password
   const verifyPassword = (password, reTypedPassword) => {
@@ -30,6 +32,13 @@ const SignUpForm = () => {
       setErrorMessage(true);
     } else {
       setErrorMessage(false);
+      createUser(userEmail, password)
+        .then((res) =>
+          updateUser(userName).then(() => {
+            console.log(res);
+          })
+        )
+        .catch((err) => console.log(err.message));
     }
   };
 
@@ -40,7 +49,9 @@ const SignUpForm = () => {
         ZenTherapy
       </h1>
 
-      <h2 className="mt-3 text-3xl font-semibold text-center md:text-start">Sign Up Your Account</h2>
+      <h2 className="mt-3 text-3xl font-semibold text-center md:text-start">
+        Sign Up Your Account
+      </h2>
 
       <p className="mt-4 text-theme-text-color-2 text-wrap hidden md:block">
         welcome Back! By click the sign up button, you're agree to ZenTherapy
@@ -172,8 +183,15 @@ const SignUpForm = () => {
             </button>
           </div>
           {/* redirect to Login/SignIn page */}
-          <p className="text-center mt-4">Already Have an Account?  
-            <Link to={"/"}> <span className="text-primary-Color-blue-2 underline font-medium">Log in</span></Link></p>
+          <p className="text-center mt-4">
+            Already Have an Account?
+            <Link to={"/"}>
+              {" "}
+              <span className="text-primary-Color-blue-2 underline font-medium">
+                Log in
+              </span>
+            </Link>
+          </p>
         </form>
       </section>
     </div>

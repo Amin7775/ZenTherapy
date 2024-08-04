@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaFacebookF, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import googleLogo from "./../../../assets/img/google logo.png";
 import DividerWithText from "../../shared/dividerWithText/DividerWithText";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const SignInForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
+  const { signInUser, googleLogin } = useContext(AuthContext);
   //   const [errorMessage, setErrorMessage] = useState(false);
 
   // handle form submit
@@ -17,7 +19,25 @@ const SignInForm = () => {
     const userEmail = formData.email.value;
     const password = formData.password.value;
 
-    console.log(userEmail, password);
+    // console.log(userEmail, password);
+    signInUser(userEmail, password)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  // handle google login/register
+  const handleGoogle = () => {
+    googleLogin()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   return (
@@ -44,7 +64,10 @@ const SignInForm = () => {
       <section className="flex justify-center gap-8 md:gap-10 mt-7 md:mt-8">
         {/* google */}
         <div>
-          <button className="flex items-center justify-center bg-gradient-to-r from-[#8f8f8f3b] to-white px-8 md:px-10 py-3 drop-shadow-md gap-3 rounded-lg border-2 hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2">
+          <button
+            onClick={() => handleGoogle()}
+            className="flex items-center justify-center bg-gradient-to-r from-[#8f8f8f3b] to-white px-8 md:px-10 py-3 drop-shadow-md gap-3 rounded-lg border-2 hover:border-theme-text-color-2 transition-all duration-300 ease-in-out hover:border-2"
+          >
             <img className="w-5" src={googleLogo} alt="" />
             Google
           </button>
