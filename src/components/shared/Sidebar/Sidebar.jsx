@@ -89,7 +89,7 @@ const Sidebar = () => {
         </div>
 
         {/* help center */}
-        <NavLink to={"/main/help"}>
+        <NavLink to={"/main/helpcenter"}>
           <div
             className={`flex hover:bg-sidebar-hover items-center gap-3 px-5 py-3 border-l-4 hover:border-l-sidebar-hover-border transition-all duration-50 ease-in-out ${getActiveClass(
               "/main/help"
