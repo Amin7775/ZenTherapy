@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/shared/Sidebar/Sidebar";
+import Navbar from "../components/shared/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
@@ -11,6 +12,7 @@ const MainLayout = () => {
         </section>
         {/* main */}
         <section className="bg-[#EFF2F5] flex-1">
+          <Navbar></Navbar>
           <Outlet></Outlet>
         </section>
       </div>
