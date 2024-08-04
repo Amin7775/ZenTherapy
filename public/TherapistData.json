@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Alexander Cort",
+    "location": "123 Elm Street, New York, NY",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/60ZnVmC/2da77c76988eacb2a180a508619cfd0b.png"
+  },
+  {
+    "id": 2,
+    "name": "Michael Smith",
+    "location": "789 Maple Drive, NY",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/SBhHPhp/02e7db5624ffcce630742e5c21f20f34.png"
+  },
+  {
+    "id": 3,
+    "name": "David Martinez",
+    "location": "Pine Street, San Francisco, CA",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/M6SQ9nv/e726756a305f112b433fc9315779b2c8.png"
+  },
+  {
+    "id": 4,
+    "name": "Jennifer Lee",
+    "location": "Pine Street, San Francisco, CA",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/NxLfSn0/4ea60fcd892aa6b8520506eea17a77c9.png"
+  }
+]

@@ -1,8 +1,9 @@
+import SearchSection from "../../components/Home/SearchSection";
 
 const Home = () => {
     return (
-        <div>
-            This is home
+        <div className="py-4 md:p-8">
+            <SearchSection></SearchSection>
         </div>
     );
 };

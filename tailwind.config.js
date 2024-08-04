@@ -13,7 +13,8 @@ export default {
         "theme-text-color-2": "#5C635A",
         "custom-black": "#2f2f2f",
         "sidebar-hover": "#D4E9FF",
-        "sidebar-hover-border": "#102C4A"
+        "sidebar-hover-border": "#102C4A",
+        "theme-bg":"#EFF2F5"
       }
     },
   },
