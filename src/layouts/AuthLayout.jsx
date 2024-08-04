@@ -1,9 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 const AuthLayout = () => {
     return (
         <div className='font-fontPoppins'>
             <Outlet></Outlet>
+            <ScrollRestoration />
         </div>
     );
 };

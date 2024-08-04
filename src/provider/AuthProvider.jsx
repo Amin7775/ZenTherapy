@@ -46,6 +46,8 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  // logout
+
   //   observer for user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {

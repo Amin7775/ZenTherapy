@@ -2,13 +2,16 @@ import { useContext, useState } from "react";
 import { FaFacebookF, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import googleLogo from "./../../../assets/img/google logo.png";
 import DividerWithText from "../../shared/dividerWithText/DividerWithText";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignInForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const { signInUser, googleLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
   //   const [errorMessage, setErrorMessage] = useState(false);
 
   // handle form submit
@@ -22,10 +25,26 @@ const SignInForm = () => {
     // console.log(userEmail, password);
     signInUser(userEmail, password)
       .then((res) => {
-        console.log(res);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Sign in Success!",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
+          navigate(location?.state ? location?.state : "/main/home");
+        });
       })
       .catch((err) => {
-        console.log(err.message);
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Sign in Failed!",
+          text: "There was an error while signing in",
+          footer: `${err.message}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
 
@@ -33,10 +52,26 @@ const SignInForm = () => {
   const handleGoogle = () => {
     googleLogin()
       .then((res) => {
-        console.log(res);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Sign in Success!",
+          showConfirmButton: false,
+          timer: 1500,
+        }).then(() => {
+          navigate(location?.state ? location?.state : "/main/home");
+        });
       })
       .catch((err) => {
-        console.log(err.message);
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Sign in Failed!",
+          text: "There was an error while signing in",
+          footer: `${err.message}`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
 

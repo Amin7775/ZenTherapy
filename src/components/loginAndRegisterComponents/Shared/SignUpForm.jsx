@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,6 +10,8 @@ const SignUpForm = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const { createUser, updateUser } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // verify password
   const verifyPassword = (password, reTypedPassword) => {
@@ -35,10 +38,28 @@ const SignUpForm = () => {
       createUser(userEmail, password)
         .then((res) =>
           updateUser(userName).then(() => {
-            console.log(res);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Sign in Success!",
+              showConfirmButton: false,
+              timer: 1500,
+            }).then(() => {
+              navigate(location?.state ? location?.state : "/main/home");
+            });
           })
         )
-        .catch((err) => console.log(err.message));
+        .catch((err) => {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Sign up Failed!",
+            text: "There was an error while signing up",
+            footer: `${err.message}`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        });
     }
   };
 

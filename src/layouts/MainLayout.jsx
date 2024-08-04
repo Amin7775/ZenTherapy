@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Sidebar from "../components/shared/Sidebar/Sidebar";
 import Navbar from "../components/shared/Navbar/Navbar";
 
@@ -13,11 +13,12 @@ const MainLayout = () => {
         {/* main */}
         <section className="bg-[#EFF2F5] flex-1 relative">
           <div className="sticky w-full z-50 border-b drop-shadow-sm">
-          <Navbar></Navbar>
+            <Navbar></Navbar>
           </div>
           <Outlet></Outlet>
         </section>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };
