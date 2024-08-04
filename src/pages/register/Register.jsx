@@ -2,11 +2,15 @@ import { useState } from "react";
 import ImageSection from "../../components/loginAndRegisterComponents/Large/ImageSection";
 import SignUpForm from "../../components/loginAndRegisterComponents/Shared/SignUpForm";
 import smallBackgroundImage from "./../../assets/img/Background sm.jpeg";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   return (
     <div>
+      <Helmet>
+        <title>ZenTherapy - Sign Up</title>
+      </Helmet>
       {/* Layout for large device */}
       <section className="hidden lg:block">
         {/* container */}
@@ -63,7 +67,8 @@ const Register = () => {
                   <h3 className="text-white text-xl mt-1 text-center">
                     <span className="text-primary-Color-blue-2 font-semibold">
                       Create Account{" "}
-                    </span> <br />
+                    </span>{" "}
+                    <br />
                     Fill In Your Information
                   </h3>
                 </div>
@@ -80,7 +85,8 @@ const Register = () => {
                 </h1>
 
                 <h3 className="text-white text-lg mt-6 max-w-[60%] mx-auto text-center">
-                  <span className="font-semibold">Create Account </span><br />
+                  <span className="font-semibold">Create Account </span>
+                  <br />
                   Fill In Your Information
                 </h3>
               </section>

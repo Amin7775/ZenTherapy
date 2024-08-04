@@ -2,12 +2,16 @@ import { useState } from "react";
 import SignInImageSection from "../../components/loginAndRegisterComponents/Large/SignInImageSection";
 import SignInForm from "../../components/loginAndRegisterComponents/Shared/SignInForm";
 import smallBackgroundImage from "./../../assets/img/Background sm.jpeg";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   return (
     <div>
+      <Helmet>
+        <title>ZenTherapy - Sign In</title>
+      </Helmet>
       {/* Layout for large device */}
       <section className="hidden lg:block">
         {/* container */}

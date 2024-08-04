@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import searchImage from "./../../assets/img/search-illu.svg";
 import TherapistCard from "../../components/shared/TherapistCard/TherapistCard";
+import { Helmet } from "react-helmet-async";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,6 +26,9 @@ const Search = () => {
   };
   return (
     <div className="py-4 pb-8 md:p-8 min-h-screen">
+      <Helmet>
+        <title>ZenTherapy - Search</title>
+      </Helmet>
       <section className="flex flex-col items-center justify-center w-full  min-h-[68vh]">
         <img className="w-[80%] md:w-[23%] mb-10" src={searchImage} alt="" />
         {/* search bar */}

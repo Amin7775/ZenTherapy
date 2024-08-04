@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Cities from "../../components/Home/Cities";
 import FeaturedTherapists from "../../components/Home/FeaturedTherapists";
 import SearchSection from "../../components/Home/SearchSection";
@@ -6,6 +7,9 @@ import Testimonials from "../../components/Home/Testimonials";
 const Home = () => {
   return (
     <div className="py-4 pb-8 md:p-8">
+      <Helmet>
+        <title>ZenTherapy - Home</title>
+      </Helmet>
       {/* search section */}
       <SearchSection></SearchSection>
       {/* featured therapists section */}

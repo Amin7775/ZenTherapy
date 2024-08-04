@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TherapistCard from "../../components/shared/TherapistCard/TherapistCard";
+import { Helmet } from "react-helmet-async";
 
 const NewListing = () => {
   const [therapistData, setTherapistData] = useState([]);
@@ -12,6 +13,9 @@ const NewListing = () => {
 
   return (
     <div className="py-4 pb-8 md:p-8">
+      <Helmet>
+        <title>ZenTherapy - New Listings</title>
+      </Helmet>
       <h1 className="text-3xl font-semibold text-center">New Therapists</h1>
       <section className="rounded-xl p-4 md:p-8 bg-white mt-4 lg:mt-8">
         {/* cards container */}
