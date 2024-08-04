@@ -26,11 +26,47 @@
     "location": "Pine Street, San Francisco, CA",
     "services": "Mobile & In-Studio",
     "image": "https://i.ibb.co/NxLfSn0/4ea60fcd892aa6b8520506eea17a77c9.png"
-  },{
+  },
+  {
     "id": 5,
-    "name": "Alexander Cort",
-    "location": "123 Elm Street, New York, NY",
+    "name": "Sarah Johnson",
+    "location": "456 Oak Avenue, Los Angeles, CA",
+    "services": "In-Studio Only",
+    "image": "https://i.ibb.co/MsmCD1n/team-1.png"
+  },
+  {
+    "id": 6,
+    "name": "Chris Evans",
+    "location": "789 Pine Street, Miami, FL",
     "services": "Mobile & In-Studio",
-    "image": "https://i.ibb.co/60ZnVmC/2da77c76988eacb2a180a508619cfd0b.png"
+    "image": "https://i.ibb.co/gSQP6SD/cus-1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Emma Watson",
+    "location": "101 Maple Drive, Seattle, WA",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/MsmCD1n/team-1.png"
+  },
+  {
+    "id": 8,
+    "name": "John Doe",
+    "location": "102 Pine Street, Boston, MA",
+    "services": "Mobile Only",
+    "image": "https://i.ibb.co/m921Sp6/team-2.png"
+  },
+  {
+    "id": 9,
+    "name": "Jane Smith",
+    "location": "103 Elm Street, Chicago, IL",
+    "services": "In-Studio Only",
+    "image": "https://i.ibb.co/DWWXSPw/team-02.png"
+  },
+  {
+    "id": 10,
+    "name": "Alex Brown",
+    "location": "104 Oak Avenue, San Diego, CA",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/M6SQ9nv/e726756a305f112b433fc9315779b2c8.png"
   }
 ]
