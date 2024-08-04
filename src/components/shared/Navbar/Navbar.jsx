@@ -4,7 +4,7 @@ import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import { CiBellOn, CiLogout } from "react-icons/ci";
 // import { RxExit } from "react-icons/rx";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsInfoSquare } from "react-icons/bs";
 import { CiGrid41, CiSearch } from "react-icons/ci";
 import { GoPeople } from "react-icons/go";
@@ -12,11 +12,19 @@ import { ImFileText2 } from "react-icons/im";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 import { NavLink, useLocation } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user,logOut } = useContext(AuthContext);
+  // console.log(user);
 
+  const handleSignOut = () =>{
+    console.log("clicked")
+    logOut()
+  }  
+// set style to active nav class
   const getActiveClass = (path) => {
     return location.pathname === path
       ? "font-medium bg-sidebar-hover border-l-sidebar-hover-border"
@@ -47,13 +55,13 @@ const Navbar = () => {
                 {/* user name */}
                 <div className="flex justify-between">
                   <h3 className="font-medium text-sm text-custom-black">
-                    Sagar Sani
+                    {user?.displayName}
                   </h3>
                   <IoIosArrowDown className="cursor-pointer" />
                 </div>
 
                 {/* email */}
-                <h4 className="text-sm text-[#5C635A]">SagarSani@gmail.com</h4>
+                <h4 className="text-sm text-[#5C635A]">{user?.email}</h4>
               </div>
             </section>
           </section>
@@ -75,9 +83,9 @@ const Navbar = () => {
             {/* logout */}
             <div className="hidden md:block">
               <div className="border-l-2 pl-5 flex gap-3 items-center text-[#F15E4A]">
-                <h3 className="font-medium cursor-pointer">Log Out</h3>
+                <h3 onClick={handleSignOut} className="font-medium cursor-pointer">Log Out</h3>
                 {/* exit btn */}
-                <div className="p-2 border-0 rounded-full bg-[#FFECEA] hover:bg-red-100 cursor-pointer">
+                <div onClick={handleSignOut} className="p-2 border-0 rounded-full bg-[#FFECEA] hover:bg-red-100 cursor-pointer">
                   <svg
                     width="22"
                     height="22"
@@ -140,11 +148,9 @@ const Navbar = () => {
                         alt=""
                       />
                       <h3 className="mt-4 text-3xl text-white font-semibold text-wrap">
-                        Sagar Sani
+                        {user.displayName}
                       </h3>
-                      <p className="text-white mt-2 text-wrap">
-                        sagarSani@gmail.com
-                      </p>
+                      <p className="text-white mt-2 text-wrap">{user.email}</p>
                     </section>
                   </section>
 
@@ -239,6 +245,7 @@ const Navbar = () => {
                     </NavLink>
                     {/* Logout  */}
                     <div
+                    onClick={handleSignOut}
                       className={`flex hover:bg-sidebar-hover items-center gap-3 px-5 py-3 border-l-4 border-white hover:border-l-sidebar-hover-border transition-all duration-50 ease-in-out`}
                     >
                       <CiLogout className="text-xl mt-0.5" />
