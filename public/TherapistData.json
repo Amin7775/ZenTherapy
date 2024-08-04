@@ -26,5 +26,11 @@
     "location": "Pine Street, San Francisco, CA",
     "services": "Mobile & In-Studio",
     "image": "https://i.ibb.co/NxLfSn0/4ea60fcd892aa6b8520506eea17a77c9.png"
+  },{
+    "id": 1,
+    "name": "Alexander Cort",
+    "location": "123 Elm Street, New York, NY",
+    "services": "Mobile & In-Studio",
+    "image": "https://i.ibb.co/60ZnVmC/2da77c76988eacb2a180a508619cfd0b.png"
   }
 ]
