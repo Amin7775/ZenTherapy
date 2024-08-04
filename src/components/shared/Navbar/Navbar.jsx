@@ -74,41 +74,41 @@ const Navbar = () => {
             </div>
             {/* logout */}
             <div className="hidden md:block">
-            <div className="border-l-2 pl-5 flex gap-3 items-center text-[#F15E4A]">
-              <h3 className="font-medium cursor-pointer">Log Out</h3>
-              {/* exit btn */}
-              <div className="p-2 border-0 rounded-full bg-[#FFECEA] hover:bg-red-100 cursor-pointer">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M13.4706 3.05881L17.0001 3.05881C17.4681 3.05881 17.9169 3.24473 18.2479 3.57568C18.5788 3.90663 18.7648 4.35549 18.7648 4.82351L18.7648 17.1765C18.7648 17.6445 18.5788 18.0933 18.2479 18.4243C17.9169 18.7552 17.4681 18.9412 17.0001 18.9412L13.4706 18.9412"
-                    stroke="#F15E4A"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M9.05884 15.4119L13.4706 11.0001L9.05884 6.58834"
-                    stroke="#F15E4A"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M13.4704 11L2.8822 11"
-                    stroke="#F15E4A"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+              <div className="border-l-2 pl-5 flex gap-3 items-center text-[#F15E4A]">
+                <h3 className="font-medium cursor-pointer">Log Out</h3>
+                {/* exit btn */}
+                <div className="p-2 border-0 rounded-full bg-[#FFECEA] hover:bg-red-100 cursor-pointer">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.4706 3.05881L17.0001 3.05881C17.4681 3.05881 17.9169 3.24473 18.2479 3.57568C18.5788 3.90663 18.7648 4.35549 18.7648 4.82351L18.7648 17.1765C18.7648 17.6445 18.5788 18.0933 18.2479 18.4243C17.9169 18.7552 17.4681 18.9412 17.0001 18.9412L13.4706 18.9412"
+                      stroke="#F15E4A"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.05884 15.4119L13.4706 11.0001L9.05884 6.58834"
+                      stroke="#F15E4A"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M13.4704 11L2.8822 11"
+                      stroke="#F15E4A"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
-            </div>
             </div>
             {/* nav menu for small devices */}
             {/* icon */}
@@ -215,7 +215,7 @@ const Navbar = () => {
                     </div>
 
                     {/* help center */}
-                    <NavLink to={"/main/help"}>
+                    <NavLink to={"/main/helpcenter"}>
                       <div
                         className={`flex hover:bg-sidebar-hover items-center gap-3 px-5 py-3 border-l-4 hover:border-l-sidebar-hover-border transition-all duration-50 ease-in-out ${getActiveClass(
                           "/main/help"
